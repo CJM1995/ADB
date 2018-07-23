@@ -272,7 +272,7 @@ if (isset($_POST['delete'])) {
                                             <th scope="col">Coordinates</th>
                                             <th scope="col">Taken_Date</th>
                                             <th scope="col">Computer_ID</th>
-                                            <th scope="col" style="text-align: center">Change/Remove</th>
+                                            <th scope="col" style="text-align: center">Change</th>
                                         </tr>
                                         </thead>
                                         <tbody>

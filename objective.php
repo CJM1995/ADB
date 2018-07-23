@@ -379,7 +379,7 @@ if (isset($_POST['delete'])) {
                                         <th scope="col">Surface_Radiation</th>
                                         <th scope="col">Radiation_Exposure</th>
                                         <th scope="col">RoverID</th>
-                                        <th scope="col" style="text-align: center">Change/Remove</th>
+                                        <th scope="col" style="text-align: center">Change</th>
                                     </tr>
                                     </thead>
                                     <tbody style="font-weight: 900;">

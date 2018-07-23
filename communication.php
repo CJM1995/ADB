@@ -195,17 +195,17 @@ if (isset($_POST['delete'])) {
                                                     <div class="md-form">
                                                         <h6 class="text-white" for="primaryKey">Device ID</h6>
                                                         <input type="text" name="primaryKey" id="primaryKey"
-                                                               class="form-control bg-dark text-white">
+                                                               class="form-control bg-dark text-white" required>
                                                     </div>
                                                     <div class="md-form">
                                                         <h6 class="text-white" for="comDPro">Protocol</h6>
                                                         <input type="text" name="comDPro" id="comDPro"
-                                                               class="form-control bg-dark text-white">
+                                                               class="form-control bg-dark text-white" required>
                                                     </div>
                                                     <div class="md-form">
                                                         <h6 class="text-white" for="comDDTime">Delay Time</h6>
                                                         <input type="time" name="comDDTime" id="comDDTime"
-                                                               class="form-control bg-dark text-white" step="2">
+                                                               class="form-control bg-dark text-white" step="2" required>
                                                     </div>
                                                     <div class="md-form">
                                                         <h6 class="text-white" for="comDRBand">Related Band</h6>
@@ -237,17 +237,17 @@ if (isset($_POST['delete'])) {
                                                     <div class="md-form">
                                                         <h6 class="text-white" for="comDRover">Rover ID</h6>
                                                         <input type="text" name="comDRover" id="comDRover"
-                                                               class="form-control bg-dark text-white">
+                                                               class="form-control bg-dark text-white" required>
                                                     </div>
                                                     <div class="md-form">
                                                         <h6 class="text-white" for="comDOrbiter">Orbiter ID</h6>
                                                         <input type="text" name="comDOrbiter" id="comDOrbiter"
-                                                               class="form-control bg-dark text-white">
+                                                               class="form-control bg-dark text-white" required>
                                                     </div>
                                                     <div class="md-form">
                                                         <h6 class="text-white" for="comDCPUID">Computer ID</h6>
                                                         <input type="text" name="comDCPUID" id="comDCPUID"
-                                                               class="form-control bg-dark text-white">
+                                                               class="form-control bg-dark text-white" required>
                                                     </div>
                                                 </div>
                                             </div>

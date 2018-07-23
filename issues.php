@@ -16,7 +16,7 @@ if (isset($_POST['add'])) {
     $isdes = $_POST['issDesc'];
     $isrid = $_POST['issRoverID'];
 
-    $query = "insert into Roverissue values(ISSUEId_seq.nextval,TO_DATE('$isdate','YYYY-MM-DD'),TO_TIMESTAMP('$istime','HH.MI.SS AM'),'$isunit','$isdes','$isrid')";
+    $query = "insert into Roverissue values(ISSUEId_seq.nextval,TO_DATE('$isdate','YYYY-MM-DD'),TO_TIMESTAMP('$istime','HH24:MI:SS'),'$isunit','$isdes','$isrid')";
     $stid = oci_parse($conn, $query);
     oci_execute($stid);
 
@@ -251,7 +251,7 @@ if (isset($_POST['delete'])) {
                                         <th scope="col">Unit</th>
                                         <th scope="col">Description</th>
                                         <th scope="col">RoverID</th>
-                                        <th scope="col" style="text-align: center">Change/Remove</th>
+                                        <th scope="col" style="text-align: center">Change</th>
                                     </tr>
                                     </thead>
 
