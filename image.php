@@ -19,14 +19,11 @@ if (isset($_POST['add'])) {
 
     $query = "insert into Image values('$pkey',TO_TIMESTAMP('$itime','HH24:MI:SS'),TO_DATE('$idate','YYYY-MM-DD'),'$idens','$isig','$icol','$icomp','$ipix','$ires','$icont','$idb','$icam','$itd')";
     $stid = oci_parse($conn, $query);
-   $res= oci_execute($stid);
+    oci_execute($stid);
 
-    if ($res) {
+    if ($stid) {
         echo "<script>alert('Record Inserted!');</script>";
-        
     }
-
-
 
 }
 
