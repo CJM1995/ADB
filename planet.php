@@ -27,10 +27,13 @@ if (isset($_POST['update'])) {
 
     $query = "update planet set name='$name' where id='$pkey'";
     $stid = oci_parse($conn, $query);
-    oci_execute($stid);
+    $res=oci_execute($stid);
 
-    if ($stid) {
+    if ($res) {
         echo "<script>alert('Record Updated');</script>";
+    }
+    else{
+        echo "<script>alert('Record Update failed');</script>";
     }
 
 }

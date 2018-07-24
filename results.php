@@ -2,31 +2,35 @@
 
 include('connect.php');
 
-
-$query = "BEGIN IMAGECOUNT(:ret); end;";
-	$stid = oci_parse($conn, $query);
-	oci_bind_by_name($stid, ':ret',$r,200) ;
-	
-	oci_execute($stid);
-
-	
 if (isset($_POST['add'])) {
-
-	$rovId ='R001';
-
-	$query = "BEGIN GET_ROVERISSUES(:rid,:uunit,:info); end;";
+	$name = $_POST['planetName'];
+	$propeties = $_POST['planetProperties'];
+	$autoInc = (int)$_POST['rowCount'];
+	$autoInc2 = ($autoInc + 1);
+	//echo "<script>alert('$autoInc2');</script>";
+	$autoInc3 = 3;
+	$query = "insert into planet values(PlanetId_seq.nextval,'$name')";
 	$stid = oci_parse($conn, $query);
-	oci_bind_by_name($stid, ':uunit',$r,200) ;
-	oci_bind_by_name($stid, ':rid',$rovId,200) ;
-	oci_bind_by_name($stid, ':info',$info,200) ;
 	oci_execute($stid);
-	
-	// print "$info\n";
+
+	if ($stid) {
+		echo "<script>alert('Record Inserted!');</script>";
+	}
+
 }
 
 if (isset($_POST['update'])) {
+	$pkey = $_POST['primaryKey'];
+	$name = $_POST['planetName'];
+	$propeties = $_POST['planetProperties'];
 
-	
+	$query = "update planet set name='$name' where id='$pkey'";
+	$stid = oci_parse($conn, $query);
+	oci_execute($stid);
+
+	if ($stid) {
+		echo "<script>alert('Record Updated');</script>";
+	}
 
 }
 
@@ -198,30 +202,25 @@ if (isset($_POST['delete'])) {
 										<input type="hidden" id="rowCount" name="rowCount" class="form-control" >
 										<div class="md-form">
 											<h6 for="totImgs" class="text-white">Total Images</h6>
-											<input type="text" id="totImgs" name="totImgs" class="form-control bg-dark text-white" style="margin-top:20px;" value="<?php echo $r ?>">
+											<input type="text" id="totImgs" name="totImgs" class="form-control bg-dark text-white" style="margin-top:20px;">
 										</div>
-
-										</form>
-									</div>
-									<div class="card-body mx-4 mt-4">
-										<form name="roverInfo" method="post">
-
-                                        
-										<div class="md-form">
-											<h6 for="roveId" class="text-white">Rover ID</h6>
-											<input type="text" id="roveId" name="roveId" class="form-control bg-dark text-white" style="margin-top:20px;">
+                                        <div class="form-inline">
+											<button  type="button" title="Search" class="btn btn-outline-success btn-sm px-2">
+												<i class="fa fa-search mt-0"></i>
+											</button>
+                                            <input id="SBrover" name="SBrover" class="form-control form-control-sm ml-3 w-75 text-white" type="text" placeholder="Check rover temperature" aria-label="Search" style="margin-top:20px;">
 										</div>
                                         <div class="md-form">
-											<h6 for="siteTemp" class="text-white">Site temperature</h6>
-											<input type="text" id="siteTemp" name="siteTemp" class="form-control bg-dark text-white" style="margin-top:20px;">
+											<h6 for="totImgs" class="text-white">Site temperature</h6>
+											<input type="text" id="totImgs" name="totImgs" class="form-control bg-dark text-white" style="margin-top:20px;">
 										</div>
                                         <div class="md-form">
-											<h6 for="roverDuration" class="text-white">Rover duration</h6>
-											<input type="text" id="roverDuration" name="roverDuration" class="form-control bg-dark text-white" style="margin-top:20px;">
+											<h6 for="totImgs" class="text-white">Rover duration</h6>
+											<input type="text" id="totImgs" name="totImgs" class="form-control bg-dark text-white" style="margin-top:20px;">
 										</div>
                                         <div class="md-form">
-											<h6 for="rovIssues" class="text-white">Rover Issues</h6>
-											<input type="text" id="rovIssues" name="rovIssues" class="form-control bg-dark text-white" style="margin-top:20px;">
+											<h6 for="totImgs" class="text-white">Rover Issues</h6>
+											<input type="text" id="totImgs" name="totImgs" class="form-control bg-dark text-white" style="margin-top:20px;">
 										</div>
 										<br>
 
@@ -262,10 +261,7 @@ if (isset($_POST['delete'])) {
 					<!--new form-->
                 </div>
         </div>
-		<br>
-		<br>
     </div>
-
 </section>
 
 </header>
@@ -278,7 +274,7 @@ if (isset($_POST['delete'])) {
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
-	<div></div>
+
 </body>
 		
 </html>

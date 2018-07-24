@@ -20,11 +20,13 @@ VALUES
 )";
 
     $stid = oci_parse($conn, $query);
-    oci_execute($stid);
+    $res=oci_execute($stid);
 
-    if ($stid) {
-        echo "<script>alert('Record Inserted!');</script>";
-        //echo "<script> swal('WOW!','Message!','success') </script>";
+    if ($res) {
+        echo "<script>alert('Record Inserted');</script>";
+    }
+    else{
+        echo "<script>alert('Record Insert failed');</script>";
     }
 
 }
