@@ -181,7 +181,7 @@ if (isset($_POST['delete'])) {
                                             <div class="md-form">
                                                 <h6 for="primaryKey" class="text-white">SystemID</h6>
                                                 <input type="text" name="primaryKey" id="primaryKey"
-                                                       class="form-control bg-dark text-white" required>
+                                                       class="form-control bg-dark text-white">
                                             </div>
                                             <div class="md-form">
                                                 <h6 for="thCTemp" class="text-white">Current Temperature</h6>
@@ -196,7 +196,7 @@ if (isset($_POST['delete'])) {
                                             <div class="form-group">
                                                 <h6 for="thType" class="text-white">System Type</h6>
                                                 <select name="thType" id="thType"
-                                                        class="custom-select bg-dark text-white" required>
+                                                        class="custom-select bg-dark text-white">
                                                     <option selected="" disabled>Choose System</option>
                                                     <option value="Heater">Heater</option>
                                                     <option value="HRS">HRS</option>
@@ -221,7 +221,7 @@ if (isset($_POST['delete'])) {
                                             <div class="md-form">
                                                 <h6 for="thRoverID" class="text-white">RoverID</h6>
                                                 <input type="text" name="thRoverID" id="thRoverID"
-                                                       class="form-control bg-dark text-white" required>
+                                                       class="form-control bg-dark text-white">
                                             </div>
                                             <br>
 
@@ -279,7 +279,7 @@ if (isset($_POST['delete'])) {
                                             <th scope="col">Tube_Length</th>
                                             <th scope="col">Fluid_Type</th>
                                             <th scope="col">RoverID</th>
-                                            <th scope="col" style="text-align: center">Change</th>
+                                            <th scope="col" style="text-align: center">Change/Remove</th>
                                         </tr>
                                         </thead>
                                         <tbody>

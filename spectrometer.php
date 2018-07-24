@@ -187,12 +187,12 @@ if (isset($_POST['delete'])) {
                                                     <div class="md-form">
                                                         <h6 class="text-white" for="specName">Name</h6>
                                                         <input type="text" name="specName" id="specName"
-                                                               class="form-control bg-dark text-white" required>
+                                                               class="form-control bg-dark text-white">
                                                     </div>
                                                     <div class="form-group">
                                                         <h6 class="text-white" for="SPType">Spectrometer Type</h6>
                                                         <select name="SPType" id="SPType"
-                                                                class="custom-select bg-dark text-white" required>
+                                                                class="custom-select bg-dark text-white">
                                                             <option selected="" disabled>Select spectrometer type
                                                             </option>
                                                             <option value="APXS">APXS</option>
@@ -240,7 +240,7 @@ if (isset($_POST['delete'])) {
                                                     <div class="md-form">
                                                         <h6 class="text-white" for="specRoverID">RoverID</h6>
                                                         <input type="text" name="specRoverID" id="specRoverID"
-                                                               class="form-control bg-dark text-white" required>
+                                                               class="form-control bg-dark text-white">
                                                     </div>
                                                 </div>
                                             </div>
@@ -303,7 +303,7 @@ if (isset($_POST['delete'])) {
                                         <th scope="col">Spectra</th>
                                         <th scope="col">Components</th>
                                         <th scope="col">RoverID</th>
-                                        <th scope="col" style="text-align: center">Change</th>
+                                        <th scope="col" style="text-align: center">Change/Remove</th>
                                     </tr>
                                     </thead>
                                     <tbody>

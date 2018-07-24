@@ -251,7 +251,7 @@ if (isset($_POST['delete'])) {
                                         <th scope="col">Operator</th>
                                         <th scope="col">Mission_Duration</th>
                                         <th scope="col">Manufacturer</th>
-                                        <th scope="col" style="text-align: center">Change</th>
+                                        <th scope="col" style="text-align: center">Change/Remove</th>
                                     </tr>
                                     </thead>
                                     <tbody>

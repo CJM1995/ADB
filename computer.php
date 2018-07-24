@@ -266,7 +266,7 @@ if (isset($_POST['delete'])) {
                                             <th scope="col">DRAM</th>
                                             <th scope="col">Flash</th>
                                             <th scope="col">RoverID</th>
-                                            <th scope="col" style="text-align: center">Change</th>
+                                            <th scope="col" style="text-align: center">Change/Remove</th>
                                         </tr>
                                         </thead>
                                         <tbody style="font-weight: 900;">
